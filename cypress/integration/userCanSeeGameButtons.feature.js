@@ -4,7 +4,7 @@ describe('User can see game interface', () => {
     })
     
     it('Displays RPS game title', () => {
-        cy.contains('RPS Game')
+        cy.contains('Welcome to RPS Game')
     })
 
     It('Can see all 3 buttons', () => {
@@ -17,17 +17,17 @@ describe('User can see game interface', () => {
 
         it('Can choose the Rock button and win', () => {
             cy.get('button#Rock').click();
-            cy.get('p#win-message').should('contain', 'You won! against Scissors')
+            cy.get('p#gamble-message').should('contain', 'You won! against Scissors')
         })
 
         it('Can choose the Scissors button and draw', () => {
             cy.get('button#Scissors').click();
-            cy.get('p#win-message').should('contain', 'You draw! against Scissors')
+            cy.get('p#gamble-message').should('contain', 'You draw! against Scissors')
         })
 
-        it('Can choose the Paper button and lost', () => {
+        it('Can choose the Paper button and lose', () => {
             cy.get('button#Paper').click();
-            cy.get('p#win-message').should('contain', 'You lost! against Scissors')
+            cy.get('p#gamble-message').should('contain', 'You lost! against Scissors')
         })
     })
 })
