@@ -58,11 +58,11 @@ class RpsGame extends Component {
       <>
         <h1> Welcome to RPS Game </h1>
 
-        <div id="playerOne">
+        <div  id="playerOne" >
           <Player shape={playerOne} />
         </div>
 
-        <div id="playerTwo">
+        <div  id="playerTwo" >
           <Player shape={playerTwo} />
         </div>
 

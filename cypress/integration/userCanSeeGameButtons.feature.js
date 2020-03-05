@@ -20,4 +20,12 @@ describe("User can see game interface", () => {
         cy.get('button#scissors-button').click();
         cy.get('button#startButton').click();
     });
+
+    describe("User can see the images", () => {
+
+        it('Shape images are visible', () => {
+            cy.get('.shapeImage').should('exist')
+        })
+
+    });
 });
