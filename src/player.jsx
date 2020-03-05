@@ -23,4 +23,4 @@ const Player = ({shape}) => {
     )
 }
 
-export (Player, playerTwoShape);
+export {Player, playerTwoShape};
