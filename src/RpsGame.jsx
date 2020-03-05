@@ -97,8 +97,8 @@ class RpsGame extends Component {
           Go!
         </button>
 
-        <p className="link"><a href= 'https://jcruz.netlify.com'>By Jaime</a></p>
-        <p className="link"><a href= '/'>Go back</a></p>
+        <p id="toPortafolio" className="link"><a href= 'https://jcruz.netlify.com'>By Jaime</a></p>
+        <p id="backToRules" className="link"><a href= '/'>Go back</a></p>
       </>
     );
   }

@@ -7,17 +7,17 @@ const startingPage = () => {
             <h1>Welcome to the classic Rock, Paper, Scissors!</h1>
             <h2>Please read the game rules before starting the game.</h2>
 
-            <p className="WelcomePageP">
+            <p id= "WelcomePageP" className="WelcomePageP">
             The game is played where players deliver hand signals
             that will represent the elements of the game; rock, paper and scissors.
             </p>
-            <p className="WelcomePageP">
+            <p id= "WelcomePageP" className="WelcomePageP">
             The outcome of the game is determined by 3 simple rules:
             </p>
-            <p>Rock wins against scissors.</p>
-            <p>Scissors win against paper.</p>
-            <p>Paper wins against rock.</p>
-            <a href="/Game" class="button">Go to Game page!</a>
+            <p id= "WelcomePageP">Rock wins against scissors.</p>
+            <p id= "WelcomePageP">Scissors win against paper.</p>
+            <p id= "WelcomePageP">Paper wins against rock.</p>
+            <a href="/Game" id="linkToGame" className="button">Go to Game page!</a>
         </div>
     )
 }
