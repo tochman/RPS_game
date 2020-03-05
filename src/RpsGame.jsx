@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
-import Player from './player';
+import { Player, playerTwoShape} from './player';
 import Chance from 'chance';
-
-
-const playerTwoShape = () => {
-  let chance = new Chance()
-  let playerTwoPick = chance.pickone(["rock", "paper", "scissors"])
-  return playerTwoPick
-}
 
 class RpsGame extends Component {
 
@@ -23,7 +16,7 @@ class RpsGame extends Component {
     let gameInterval = setInterval(() => {
       counter++;
       this.setState({
-        playerTwo: playerTwoShape,
+        playerTwo: playerTwoShape(),
         winner: ""
       });
       if (counter > 5) {
