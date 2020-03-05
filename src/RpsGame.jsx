@@ -65,21 +65,21 @@ class RpsGame extends Component {
 
         <div>
           <button
-            className="weaponBtn"
+            className="shapeBtn"
             id="rock-button"
             onClick={() => this.selectShape("rock")}
           >
             rock
           </button>
           <button
-            className="weaponBtn"
+            className="shapeBtn"
             id="paper-button"
             onClick={() => this.selectShape("paper")}
           >
             paper
           </button>
           <button
-            className="weaponBtn"
+            className="shapeBtn"
             id="scissors-button"
             onClick={() => this.selectShape("scissors")}
           >
