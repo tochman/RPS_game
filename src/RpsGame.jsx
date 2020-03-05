@@ -87,9 +87,11 @@ class RpsGame extends Component {
           </button>
         </div>
 
-        <div className="winner">{winner ? this.selectWinner() : null}</div>
+        <div className="winner">
+        <p id="winnerMessage" >{winner ? this.selectWinner() : null}</p>
+        </div>
 
-        <button type="button" onClick={this.startGame}>
+        <button type="button" id="startButton" onClick={this.startGame}>
           Start!
         </button>
 
