@@ -1,6 +1,6 @@
 describe('User can see win/lose/draw message', () => {
     beforeEach(() => {
-        cy.visit("/");
+        cy.visit("/Game");
     });
 
     it("Message should be a string", () => {

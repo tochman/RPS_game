@@ -9,7 +9,6 @@ class RpsGame extends Component {
     winner: ""
   };
 
-
   startGame = () => {
     let counter = 0;
     let gameInterval = setInterval(() => {
@@ -43,7 +42,6 @@ class RpsGame extends Component {
     }
   };
 
-
   selectShape = shape => {
     this.setState({
       playerOne: shape,
@@ -51,18 +49,17 @@ class RpsGame extends Component {
     });
   };
 
-
   render() {
     const { playerOne, playerTwo, winner } = this.state;
     return (
       <>
-        <h1> Welcome to RPS Game </h1>
+        <h1> Rock Paper Scissors</h1>
+        <h1> Go!!</h1>
 
-        <div  id="playerOne" >
+        <div className="playerChild"  id="playerOne" >
           <Player shape={playerOne} />
         </div>
-
-        <div  id="playerTwo" >
+        <div className="playerChild" id="playerTwo" >   
           <Player shape={playerTwo} />
         </div>
 
@@ -74,6 +71,7 @@ class RpsGame extends Component {
           >
             rock
           </button>
+
           <button
             className="shapeBtn"
             id="paper-button"
@@ -81,6 +79,7 @@ class RpsGame extends Component {
           >
             paper
           </button>
+
           <button
             className="shapeBtn"
             id="scissors-button"
@@ -94,10 +93,12 @@ class RpsGame extends Component {
           <p id="winnerMessage" >{winner ? this.selectWinner() : null}</p>
         </div>
 
-        <button type="button" id="startButton" onClick={this.startGame}>
-          Start!
+        <button className="startButton" type="button" id="startButton" onClick={this.startGame}>
+          Go!
         </button>
 
+        <p id="toPortafolio" className="link"><a href= 'https://jcruz.netlify.com'>By Jaime</a></p>
+        <p id="backToRules" className="link"><a href= '/'>Go back</a></p>
       </>
     );
   }

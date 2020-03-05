@@ -1,17 +1,18 @@
 describe("User can see game interface", () => {
     beforeEach(() => {
-        cy.visit("/");
+        cy.visit("/Game");
     });
 
-    it("Displays RPS game title", () => {
-        cy.contains("Welcome to RPS Game");
+    it("Displays title and subtitle", () => {
+        cy.contains("Rock Paper Scissors");
+        cy.contains("Go!!");
     });
 
     it('Can see all 4 buttons', () => {
         cy.contains('rock');
         cy.contains('paper');
         cy.contains('scissors');
-        cy.contains('Start!')
+        cy.contains('Go!')
     });
 
     it('Can Click the buttons', () => {
@@ -26,6 +27,5 @@ describe("User can see game interface", () => {
         it('Shape images are visible', () => {
             cy.get('.shapeImage').should('exist')
         })
-
     });
 });
