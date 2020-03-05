@@ -13,8 +13,8 @@ const playerTwoShape = () => {
 
 const Player = ({shape}) => {
     return (
-        <div className="player">
-        <img className="player-image" 
+        <div className="shapes">
+        <img className="shapeImage" 
          src={
             shape === "rock" ? rock : shape === "scissors" ? scissors : paper
         }

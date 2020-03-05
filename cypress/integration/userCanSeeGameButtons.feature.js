@@ -7,33 +7,25 @@ describe("User can see game interface", () => {
         cy.contains("Welcome to RPS Game");
     });
 
-    it('Can see all 3 buttons', () => {
-        cy.contains('Rock');
-        cy.contains('Paper');
-        cy.contains('Scissors');
+    it('Can see all 4 buttons', () => {
+        cy.contains('rock');
+        cy.contains('paper');
+        cy.contains('scissors');
+        cy.contains('Start!')
     });
 
     it('Can Click the buttons', () => {
         cy.get('button#rock-button').click();
         cy.get('button#paper-button').click();
-        cy.get('button#scissor-button').click();
+        cy.get('button#scissors-button').click();
+        cy.get('button#startButton').click();
     });
 
-    describe('User can win/draw/lose', () => {
+    describe("User can see the images", () => {
 
-        it('Can choose the Rock button and win', () => {
-            cy.get('button#rock-button').click();
-            cy.get('p#gamble-message').should('contain', 'You won! against Scissors')
-        });
+        it('Shape images are visible', () => {
+            cy.get('.shapeImage').should('exist')
+        })
 
-        it('Can choose the Paper button and lose', () => {
-            cy.get('button#paper-button').click();
-            cy.get('p#gamble-message').should('contain', 'You lost! against Scissors')
-        });
-
-        it('Can choose the Scissors button and draw', () => {
-            cy.get('button#scissor-button').click();
-            cy.get('p#gamble-message').should('contain', 'You draw! against Scissors')
-        });
     });
 });
