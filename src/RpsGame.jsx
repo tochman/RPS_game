@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Player, playerTwoShape} from './player';
-import Chance from 'chance';
+import { Player, playerTwoShape } from './player';
 
 class RpsGame extends Component {
 
@@ -9,7 +8,7 @@ class RpsGame extends Component {
     playerTwo: "",
     winner: ""
   };
- 
+
 
   startGame = () => {
     let counter = 0;
@@ -101,4 +100,3 @@ class RpsGame extends Component {
 
 
 export default RpsGame;
-  
