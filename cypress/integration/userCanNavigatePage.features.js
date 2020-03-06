@@ -28,7 +28,7 @@ describe("User can see and navigate Starting page", () => {
         });
 
         it('displays component name in url', () => {
-            cy.url().should("contain", "Game");
+            cy.url().should("contain", "game");
         })
 
         it('Display Starting page title', () => {
@@ -43,7 +43,7 @@ describe("User can see and navigate Starting page", () => {
 
     describe('User can go to Portafolio', () => {
         beforeEach(() => {
-            cy.visit("/Game")
+            cy.visit("/game")
         });
 
         it('Displays new url', () => {

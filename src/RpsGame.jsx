@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Player, playerTwoShape } from './player';
+import { Link } from "react-router-dom";
+
 
 class RpsGame extends Component {
 
@@ -98,7 +100,8 @@ class RpsGame extends Component {
         </button>
 
         <p id="toPortafolio" className="link"><a href= 'https://jcruz.netlify.com'>By Jaime</a></p>
-        <p id="backToRules" className="link"><a href= '/'>Go back</a></p>
+        <Link id="backToRules" to="/">Go back</Link>
+
       </>
     );
   }

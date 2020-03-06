@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 
 const startingPage = () => {
@@ -17,7 +18,7 @@ const startingPage = () => {
             <p id= "WelcomePageP">Rock wins against scissors.</p>
             <p id= "WelcomePageP">Scissors win against paper.</p>
             <p id= "WelcomePageP">Paper wins against rock.</p>
-            <a href="/Game" id="linkToGame" className="button">Go to Game page!</a>
+            <Link id="linkToGame" to="/game"> Go to Game page!</Link>
         </div>
     )
 }
