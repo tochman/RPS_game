@@ -7,20 +7,15 @@ import Chance from 'chance';
 
 const playerTwoShape = () => {
     let chance = new Chance()
-    let playerTwoPick = chance.pickone(["rock", "paper", "scissors"])
-    return playerTwoPick
+    let pickYourStudent = chance.pickone(["karro", "kayla", 
+    "emma", "jaime", "blake", "robin", "carlos", "Mr.lau", "philip", 
+    "janko", "pierre", "daniel", "hunter", "anish", "johan"])
+    return  pickYourStudent
   }
 
-const Player = ({shape}) => {
-    return (
-        <div className="shapes">
-        <img className="shapeImage" 
-         src={
-            shape === "rock" ? rock : shape === "scissors" ? scissors : paper
-        }
-        />        
-        </div>
-    )
+const sentenceShape = () => {
+
+    return 
 }
 
-export {Player, playerTwoShape};
+export {sentenceShape, playerTwoShape};
