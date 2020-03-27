@@ -13,9 +13,14 @@ const playerTwoShape = () => {
     return  pickYourStudent
   }
 
-const sentenceShape = () => {
-
-    return 
+const pickYourSentence = () => {
+    let chance = new Chance()
+    let pickYourSentence = chance.pickone([
+    "Who's Your Daddy?", "Best demo ever, RIGHT!?", "Who's the man...I'm the man!",
+    "Get Thomas excited!", "Adi what the fuck do I need to do now?", "hold your horses cowboy!",
+    "I'm going to stop you right there!","Yippee-ki-yay motherfucker!"
+    ])   
+    return pickYourSentence
 }
 
-export {sentenceShape, playerTwoShape};
+export {pickYourSentence, playerTwoShape};

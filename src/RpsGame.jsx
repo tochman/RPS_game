@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { playerTwoShape } from './player';
+import { pickYourSentence, playerTwoShape } from './player';
 
 
 class RpsGame extends Component {
 
   state = {
     playerTwo: "",
+    sentence: ""
   };
 
   startGame = () => {
@@ -14,6 +15,7 @@ class RpsGame extends Component {
       counter++;
       this.setState({
         playerTwo: playerTwoShape(),
+        sentence: pickYourSentence(),
       });
       if (counter > 10) {
         clearInterval(gameInterval);
@@ -23,12 +25,14 @@ class RpsGame extends Component {
 
   render() {
     const { playerTwo} = this.state;
+    const {sentence} = this.state;
     return (
       <>
         <div className="playerChild" id="playerTwo" >   
           <playerTwoShape>
-          <h1>{playerTwo}</h1>
+          <h1>{`${playerTwo}  ${sentence}`}</h1>
           </playerTwoShape>
+        <pickYourSentence />
         </div>
 
         <button className="startButton" type="button" id="startButton" onClick={this.startGame}>

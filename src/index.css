@@ -15,12 +15,6 @@ body {
   margin: auto 200px
 }
 
-.playerChild {
-  width: 200px;
-  height: 100px;
-  text-align: center;
-  display: inline-block;
-}
 
 .shapeImage {
   height: 150px;
